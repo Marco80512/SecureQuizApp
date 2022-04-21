@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+      
+    <title>{% block title %}{% endblock %}</title>
+  
+<p class = "q"> QuizApp  </p>  
+  
+  
+ <form action="/">
+  <p>Please select one of The Presidents:</p>
+  <input type="radio" id="GW" name="fav_language" value="GW">
+  <label for="gw">George Washington</label><br>
+  <input type="radio" id="JA" name="fav_language" value="JA">
+  <label for="ja">John Adams</label><br>
+  <input type="radio" id="DT" name="fav_language" value="DT">
+  <label for="dt">Donald Trump</label>
+
+  <br> 
+
+  <input type="submit" value="Submit">
+ </form>
+
+
+          
+      
+  
+       {% block content %}{% endblock %}
+	
+  </body>
+  </html>
 

@@ -1,1 +1,29 @@
+{% extends "layout.html" %}
 
+{% set active_page = "home" %}
+
+{% block title %}About Finance data{% endblock %}
+
+{% block content %}
+
+
+<form action="/page1.html">
+  <p>Who is the main character in Sword Art Online:</p>
+  <input type="radio" id="GW" name="fav_language" value="GW">
+  <label for="gw">Kazuto Kirigaya</label><br>
+  <input type="radio" id="JA" name="fav_language" value="JA">
+  <label for="ja">Asuna Yuuki</label><br>
+  <input type="radio" id="DT" name="fav_language" value="DT">
+  <label for="dt">Suguha Kirigaya</label>
+
+  <br> 
+
+  <input type="submit" value="Submit">
+ </form>
+
+
+
+
+
+
+{% endblock %}
