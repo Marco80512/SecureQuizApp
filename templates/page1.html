@@ -1,29 +1,58 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-{% set active_page = "home" %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-{% block title %}About Finance data{% endblock %}
-
-{% block content %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-<form action="/page1.html">
-  <p>Who is the main character in Sword Art Online:</p>
-  <input type="radio" id="GW" name="fav_language" value="GW">
-  <label for="gw">Kazuto Kirigaya</label><br>
-  <input type="radio" id="JA" name="fav_language" value="JA">
-  <label for="ja">Asuna Yuuki</label><br>
-  <input type="radio" id="DT" name="fav_language" value="DT">
-  <label for="dt">Suguha Kirigaya</label>
+      
+    <title></title>
+  
+
+  
+  <form action="/">
+  <p>Who is the main character in Sword Art Online?:</p>
+  <input type="radio" id="KK" name="fav_language" value="KK">
+  <label for="kk">Kazuto Kirigaya</label><br>
+  <input type="radio" id="AY" name="fav_language" value="AY">
+  <label for="ay">Asuna Yuuki</label><br>
+  <input type="radio" id="SK" name="fav_language" value="SK">
+  <label for="sk">Suguha Kirigaya</label>
 
   <br> 
 
   <input type="submit" value="Submit">
  </form>
 
+ 
+
+  
+
+          
+      
+  
+       
+	
+  </body>
+  </html>
 
 
 
 
 
-{% endblock %}
+
+
+
+
+
+
