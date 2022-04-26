@@ -4,37 +4,33 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 
 @app.route("/", methods=['GET', 'POST'])
 def render_layout():
+    session.clear()
     return render_template('layout.html')  
-    if request.method == 'POST': 
-        do_the_Radio_Button() 
-    else: 
-        show_the_Radio_Button()
+   
+    
 
     
     
 @app.route("/p")
 def render_pageI():
+    session["q1"] = request.form["President"]
     return render_template('page1.html')    
-    if request.method == 'POST': 
-        do_the_Radio_Button() 
-    else: 
-        show_the_Radio_Button
-    
+   
     
     
 @app.route("/pp")
 def render_pagez():
+    session["q2"] = request.form["SAO"]
     return render_template('page2.html')   
-    if request.method == 'POST': 
-        do_the_Radio_Button() 
-    else: 
-        show_the_Radio_Button   
-        
+    
         
         
 @app.route("/c")
 def render_pages():
-    return render_template('page3.html')  
+    session["q3"] = request.form["Money"]
+    return render_template('page3.html',Results=) 
+        
+    
   
      
    

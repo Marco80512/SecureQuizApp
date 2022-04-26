@@ -11,7 +11,34 @@
    font-size: 20px;    
 }
 .P{
-  margin-right:40%;
-  margin-left: 40%; 
+  margin-right:45%;
+  margin-left: 45%; 
    font-size: 30px;
 } 
+.r{
+  margin-right:46%;
+  margin-left: 46%; 
+  margin-top: 30%;
+  margin-bottom: 30%;
+}
+#red {
+  background-color: Red;
+  width: 0px;
+  border: 15px black;
+  padding: 50px;
+  margin: 20px;
+}
+#green{
+ 
+  background-color: Green;
+  width: 0px;
+  border: 15px black;
+  padding: 50px;
+  margin: 20px;
+}
+    
+    
+    
+    
+
+
