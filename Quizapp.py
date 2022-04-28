@@ -28,8 +28,10 @@ def render_pagez():
 @app.route("/c")
 def render_pages():
     session["q3"] = request.form["Money"]
+    if session ["q1"] == "Alexander Hamilton":
+        Markup 
     return render_template('page3.html',Results=) 
-        
+    
     
   
      
