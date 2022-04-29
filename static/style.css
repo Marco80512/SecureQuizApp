@@ -18,20 +18,20 @@
 .r{
   margin-right:46%;
   margin-left: 46%; 
-  margin-top: 30%;
+  
   margin-bottom: 30%;
 }
-#red {
+.red {
   background-color: Red;
-  width: 0px;
+  width: 100px;
   border: 15px black;
   padding: 50px;
   margin: 20px;
 }
-#green{
+.green{
  
   background-color: Green;
-  width: 0px;
+  width: 100px;
   border: 15px black;
   padding: 50px;
   margin: 20px;

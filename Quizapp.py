@@ -1,8 +1,11 @@
-from flask import Flask, url_for, render_template, request, Markup
+from flask import Flask, url_for, render_template, request, Markup, session
+import os
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
-@app.route("/", methods=['GET', 'POST'])
+app.secret_key = os.environ['SECRET_KEY']
+
+@app.route("/")
 def render_layout():
     session.clear()
     return render_template('layout.html')  
@@ -11,32 +14,46 @@ def render_layout():
 
     
     
-@app.route("/p")
+@app.route("/p",methods=['GET', 'POST'])
 def render_pageI():
-    session["q1"] = request.form["President"]
+    if "q1" not in session:
+        session["q1"] = request.form["President"]
     return render_template('page1.html')    
    
     
     
-@app.route("/pp")
+@app.route("/pp",methods=['GET', 'POST'])
 def render_pagez():
-    session["q2"] = request.form["SAO"]
+    if "q2" not in session:
+        session["q2"] = request.form["SAO"]
     return render_template('page2.html')   
     
+    
+    
         
         
-@app.route("/c")
+@app.route("/c",methods=['GET', 'POST'])
 def render_pages():
-    session["q3"] = request.form["Money"]
-    if session ["q1"] == "Alexander Hamilton":
-        Markup 
-    return render_template('page3.html',Results=) 
+    if "q3" not in session:
+        session["q3"] = request.form["Money"]
+    results= ""
+    if session ["q1"] == "GW":
+       results += Markup ('<div class="green"></div>')
+    else: 
+        results += Markup ('<div class="red"></div>')
+        
+    if session ["q2"] == "KK":
+       results += Markup ('<div class="green"></div>')
+    else: 
+        results += Markup ('<div class="red"></div>')  
+        
+    if session ["q3"] == "AH":
+       results += Markup ('<div class="green"></div>')
+    else: 
+        results += Markup ('<div class="red"></div>')  
     
+    return render_template('page3.html',Results=results) 
     
-  
-     
-   
-
 
     
   
